@@ -9,6 +9,7 @@
     "start": "node --experimental-strip-types backend/src/server.ts",
     "clear:orders": "node --experimental-strip-types scripts/clear-orders.js",
     "db": "node --experimental-strip-types scripts/db-tool.js",
+    "db:aiven": "node scripts/deploy-aiven-mysql.js",
     "seed": "node --experimental-strip-types backend/src/seed.ts",
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "dev:backend": "npm --prefix backend run dev",
@@ -16,5 +17,7 @@
     "dev": "node scripts/start-dev.js",
     "test": "npm --prefix backend test"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "mysql2": "^3.24.6"
+  }
 }

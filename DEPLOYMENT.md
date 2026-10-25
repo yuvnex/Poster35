@@ -83,6 +83,10 @@ If you prefer to host your frontend on **Vercel** and your backend on **Render**
 
 ## Useful Maintenance Commands
 
+- **Sync / Re-seed Aiven MySQL database**:
+  ```bash
+  npm run db:aiven
+  ```
 - **Reset / Clear all test orders anytime**:
   ```bash
   npm run clear:orders
@@ -99,3 +103,14 @@ If you prefer to host your frontend on **Vercel** and your backend on **Render**
   ```bash
   node scripts/verify-all.js
   ```
+
+---
+
+## Aiven MySQL Database Details
+
+- **Host**: `mysql-f10d03a-palanivelyuvanesh-efa8.l.aivencloud.com`
+- **Port**: `20477`
+- **Database**: `defaultdb`
+- **Schema File**: [`database/mysql-schema.sql`](./database/mysql-schema.sql)
+- **Deployment Script**: [`scripts/deploy-aiven-mysql.js`](./scripts/deploy-aiven-mysql.js)
+
