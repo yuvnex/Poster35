@@ -1,0 +1,21 @@
+# Render Blueprint Specification
+# Deploy both Frontend & Backend together on 1 unified free service!
+services:
+  - type: web
+    name: poster35-store
+    env: node
+    plan: free
+    region: singapore
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
